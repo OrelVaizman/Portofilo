@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+    <h1>Todos</h1>
+    <section class="filter-container">
+        <h2>Filter</h2>
+        <select onchange="onSetSort(this.value)">
+            <option value="PRIORITY">Priority</option>
+            <option value="CTIME">Creation Time</option>
+            <option value="NAME">Alphabet</option>
+        </select>
+        <select class="filterbtn" onchange="onSetFilter(this.value)">
+            <option value="ALL">All</option>
+            <option value="ACTIVE">Active</option>
+            <option value="DONE">Done</option>
+        </select>
+    </section>
+
+    <ul class="todo-list">
+    </ul>
+
+    <input class="new-todo-txt" type="text" placeholder="What todo?" />
+    <button class="btn" onclick="onAddTodo()">Add</button>
+    <select class="priority">
+        <option value="3">Highest Priority</option>
+        <option value="2">Medium Priority</option>
+        <option value="1">Lowest Priority</option>
+    </select>
+    <section class="todo-stat">
+        Total todos:
+        <span class="total"></span>
+        Active:
+        <span class="active"></span>
+    </section>
+
+
+    <footer>
+        cofferights 2020
+    </footer>
+
+    <script src="js/services/util-service.js"></script>
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/todo-service.js"></script>
+    <script src="js/todo-controller.js"></script>
+</body>
+
+</html>

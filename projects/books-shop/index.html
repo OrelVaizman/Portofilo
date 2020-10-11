@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>The book-shop project</title>
+</head>
+
+<body onload="onInit()">
+    <h1>The book-shop project</h1>
+    <h2>Create Read Update Delete List</h2>
+    <section class="add-book">
+        <h2>Add Book</h2>
+        <input type="text" name="bookName" placeholder="Book Name" />
+        <input type="text" name="bookPrice" placeholder="Book Price" />
+        <button onclick="onCreateBook()">Add book</button>
+    </section>
+    <section class="shop-container">
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Actions</th>
+            <tbody class="shoptable">
+            </tbody>
+            </thead>
+        </table>
+    </section>
+    <div class="modal" hidden>
+        <h5></h5>
+        <h6></h6>
+        <img src=""class="bookimg">
+        <p></p>
+        <button class="add-rate-btn" onclick="onDecreaseRate()">-</button>
+        <h5 class="rate"></h5>
+        <button class="add-rate-btn" onclick="onIncreaseRate()">+</button>
+        <button onclick="onCloseModal()">Close</button>
+    </div>
+    <footer>
+        <a href="about.html">About us</a>
+    </footer>
+
+    <script src="js/util-service.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/shop-service.js"></script>
+    <script src="js/shop-controller.js"></script>
+</body>
+
+</html>

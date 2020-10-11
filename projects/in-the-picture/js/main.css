@@ -1,0 +1,30 @@
+body{
+    background-color:lightseagreen;
+    text-align: center;
+}
+
+.content{
+    border: 5px solid;
+    text-align: center;
+width: 50%;
+margin: auto;    
+}
+
+img{
+    width: 200px;
+    margin: 10px;
+}
+
+.question{
+background-color: #fff;
+margin: 20px;
+padding: 10px;
+font-size: medium;
+border-radius: 5px;
+border-style: dotted;
+}
+
+.question:hover{
+    cursor: pointer;
+    background-color: rgba(217, 255, 0, 0.938);
+}
